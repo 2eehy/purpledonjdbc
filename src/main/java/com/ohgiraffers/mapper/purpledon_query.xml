@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="insertOrderMember">
+        INSERT INTO order_member(
+        member_name
+        ,phone
+        )
+        VALUES(
+         ?
+        ,?
+        )
+
+    </entry>
+
+    <entry key="insertOrderBurger">
+        INSERT  order_burger(
+        order_code
+        hamburger_name
+        )
+        VALUES(
+        ?
+        ,?
+        )
+    </entry>
+
+    <entry key="insertOrderList">
+        INSERT INTO order_list(
+         original_price
+        ,discount_rate
+        ,member_name
+        ,final_price
+        )
+        VALUES(
+         ?
+        ,?
+        ,?
+        ,?
+        )
+    </entry>
+
+    <entry key="insertOrderSet">
+        INSERT INTO order_set(order_code,drink_name,side_name)
+                  VALUES(       ?
+                                ,?
+                                ,?)
+
+        )
+
+
+    </entry>
+    <entry key="lastOrderCode">
+        select max(order_code)
+        from order_list;
+    </entry>
+
+
+</properties>
+
+
+
+
